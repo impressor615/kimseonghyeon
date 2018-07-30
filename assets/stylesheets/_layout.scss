@@ -1,0 +1,91 @@
+html {
+  font-size: calc(14px + (24 - 14) * ((100vw - 320px) / (1920 - 320)));
+
+  @media only screen and (max-width: $screen-min) {
+    font-size: 14px;
+  }
+
+  @media only screen and (min-width: $screen-max) {
+    font-size: 24px;
+  }
+}
+
+html, body, #__nuxt, #__layout, #root {
+  height: 100%;
+}
+
+body {
+  background: $background-color;
+  color: $primary-color;
+  font-family: $font-family;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+.layout {
+  flex-grow: 1;
+
+  display: flex;
+}
+
+.sns, .vision {
+  flex-basis: 2.5rem;
+  padding: 0 .5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sns svg.icon {
+  width: 1.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.vision {
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  letter-spacing: .05rem;
+}
+
+.page {
+  flex-grow: 1;
+  background-color: $background-secondary-color;
+}
+
+.gray {
+  color: $secondary-color;
+  font-weight: $med;
+}
+
+@media only screen and (max-width: $screen-md) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sns, .vision {
+    flex-direction: row;
+    padding: .5rem 0;
+  }
+
+  .sns {
+    order: 3;
+  }
+
+  .sns svg.icon {
+    margin-bottom: 0;
+  }
+
+  .sns svg.icon:first-child {
+    margin-right: 1.5rem;
+  }
+
+  .vision {
+    order: 2;
+    writing-mode: initial;
+  }
+}

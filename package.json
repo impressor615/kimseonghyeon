@@ -4,6 +4,11 @@
     "dev": "nuxt"
   },
   "dependencies": {
-    "nuxt": "^1.4.1"
+    "normalize.css": "^8.0.0",
+    "nuxt": "^1.4.2"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.1.0"
   }
 }
