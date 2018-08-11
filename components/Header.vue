@@ -13,7 +13,7 @@
           <span class="line" />
           <span class="line" />
         </div>
-        <nav>
+        <nav class="font-bold">
           <nuxt-link to="/" :class="{ open: isActive[0] }">
             Home
           </nuxt-link>
@@ -82,11 +82,11 @@ header {
   background-color: $secondary-color;
 }
 
-.menu .line-wrapper .line:not(:first-child) {
+.menu .line-wrapper .line {
   margin-top: 5px;
 };
 
-.menu.open .line-wrapper .line:not(:first-child) {
+.menu.open .line-wrapper .line {
   margin-top: 0;
 }
 

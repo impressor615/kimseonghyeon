@@ -16,3 +16,33 @@
   flex-direction: column;
 }
 
+// color
+.primary {
+  color: $primary-color;
+}
+
+.secondary {
+  color: $secondary-color;
+}
+
+// font-weight
+.font-bold {
+  font-weight: bold;
+}
+
+.font-thin {
+  font-weight: $font-thin;
+}
+
+.font-regular {
+  font-weight: $font-regular;
+}
+
+.font-light {
+  font-weight: $font-light;
+}
+
+.font-bold {
+  font-weight: $font-bold;
+}
+
