@@ -15,13 +15,25 @@
         </div>
       </button>
       <nav class="font-bold" :class="{ open }">
-        <nuxt-link to="/" :class="{ open: isActive[0] }">
+        <nuxt-link
+          to="/"
+          :class="{ open: isActive[0] }"
+          @click.native="onNavItemClick(0)"
+        >
           Home
         </nuxt-link>
-        <nuxt-link to="/projects" :class="{ open: isActive[1] }">
+        <nuxt-link
+          to="/projects"
+          :class="{ open: isActive[1] }"
+          @click.native="onNavItemClick(1)"
+        >
           Projects
         </nuxt-link>
-        <nuxt-link to="/writings" :class="{ open: isActive[2] }">
+        <nuxt-link
+          to="/writings"
+          :class="{ open: isActive[2] }"
+          @click.native="onNavItemClick(2)"
+        >
           Writings
         </nuxt-link>
         <div class="lang">
@@ -65,6 +77,11 @@ export default {
     onLangClick: function(lang) {
       this.$store.commit('SET_LANG', lang);
       this.onToggleHeader();
+    },
+    onNavItemClick: function(navIndex) {
+      const isActive = [false, false, false];
+      isActive[navIndex] = true;
+      this.isActive = isActive;
     }
   },
   computed: {
