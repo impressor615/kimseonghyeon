@@ -56,8 +56,10 @@ export default {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
-  padding: 30px;
+  height: $header-height;
+  padding: 0 1.5rem;
 }
 
 .menu {
@@ -69,12 +71,12 @@ header {
   display: flex;
   flex-direction: column;
   
-  margin-left: 10px;
+  margin-left: .6rem;
 }
 
 .menu .line-wrapper .line {
   display: inline-block;
-  height: 2.3px;
+  height: 2px;
   width: 20px;
 
   background-color: $secondary-color;
@@ -83,6 +85,10 @@ header {
 .menu .line-wrapper .line:not(:first-child) {
   margin-top: 5px;
 };
+
+.menu.open .line-wrapper .line:not(:first-child) {
+  margin-top: 0;
+}
 
 .menu.open nav {
   right: 0;
@@ -93,11 +99,11 @@ header {
 }
 
 .menu.open .line-wrapper .line:first-child {
-  transform: translateY(4px) rotate(45deg);
+  transform: translateY(1px) rotate(45deg);
 }
 
 .menu.open .line-wrapper .line:nth-child(3) {
-  transform: translateY(-4px) rotate(-45deg);
+  transform: translateY(-1px) rotate(-45deg);
 }
 
 .menu.open .line-wrapper .line:nth-child(2) {
@@ -106,7 +112,7 @@ header {
 
 .menu nav {
   position: fixed;
-  top: 81px;
+  top: $header-height;
   right: -35%;
 
   transition: right .6s cubic-bezier(.165,.84,.44,1);
@@ -116,10 +122,10 @@ header {
   justify-content: center;
   align-items: center;
   width: 35%;
-  height: calc(100vh - 81px);
+  height: calc(100vh - #{$header-height});
   background: black;
 
-  font-size: 45px;
+  font-size: 2rem;
 }
 
 nav a {
@@ -153,7 +159,7 @@ nav a.open::after {
 }
 
 nav a:not(:first-child) {
-  margin-top: 25px;
+  margin-top: 1.5rem;
 }
 
 @keyframes slidein {
