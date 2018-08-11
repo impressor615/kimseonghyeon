@@ -5,7 +5,7 @@
       <button
         class="menu gray"
         :class="{ open }"
-        @click="onHeaderClick"
+        @click="onToggleHeader"
       >
         {{ open ? "CLOSE" : "MENU" }}
         <div class="line-wrapper">
@@ -13,23 +13,39 @@
           <span class="line" />
           <span class="line" />
         </div>
-        <nav class="font-bold">
-          <nuxt-link to="/" :class="{ open: isActive[0] }">
-            Home
-          </nuxt-link>
-          <nuxt-link to="/projects" :class="{ open: isActive[1] }">
-            Projects
-          </nuxt-link>
-          <nuxt-link to="/writings" :class="{ open: isActive[2] }">
-            Writings
-          </nuxt-link>
-        </nav>
       </button>
+      <nav class="font-bold" :class="{ open }">
+        <nuxt-link to="/" :class="{ open: isActive[0] }">
+          Home
+        </nuxt-link>
+        <nuxt-link to="/projects" :class="{ open: isActive[1] }">
+          Projects
+        </nuxt-link>
+        <nuxt-link to="/writings" :class="{ open: isActive[2] }">
+          Writings
+        </nuxt-link>
+        <div class="lang">
+          <button
+            :class="{ active: language === 'ko' }"
+            @click="onLangClick('ko')"
+          >
+            KO.
+          </button>
+          <button
+            :class="{ active: language === 'en' }"
+            @click="onLangClick('en')"
+          >
+            EN.
+          </button>
+        </div>
+      </nav>
     </header>
   </section>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   data() {
     const path = this.$route.path;
@@ -43,9 +59,18 @@ export default {
     };
   },
   methods: {
-    onHeaderClick: function() {
+    onToggleHeader: function() {
       this.open = !this.open;
     },
+    onLangClick: function(lang) {
+      this.$store.commit('SET_LANG', lang);
+      this.onToggleHeader();
+    }
+  },
+  computed: {
+    ...mapGetters([
+      'language',
+    ]),
   },
 };
 </script>
@@ -82,16 +107,12 @@ header {
   background-color: $secondary-color;
 }
 
-.menu .line-wrapper .line {
+.menu .line-wrapper .line:not(:first-child) {
   margin-top: 5px;
 };
 
-.menu.open .line-wrapper .line {
+.menu.open .line-wrapper .line:not(:first-child) {
   margin-top: 0;
-}
-
-.menu.open nav {
-  right: 0;
 }
 
 .menu.open .line-wrapper .line {
@@ -99,18 +120,18 @@ header {
 }
 
 .menu.open .line-wrapper .line:first-child {
-  transform: translateY(1px) rotate(45deg);
+  transform: translateY(3px) rotate(45deg);
 }
 
 .menu.open .line-wrapper .line:nth-child(3) {
-  transform: translateY(-1px) rotate(-45deg);
+  transform: translateY(1px) rotate(-45deg);
 }
 
 .menu.open .line-wrapper .line:nth-child(2) {
   display: none;
 }
 
-.menu nav {
+nav {
   position: fixed;
   top: $header-height;
   right: -35%;
@@ -126,6 +147,10 @@ header {
   background: black;
 
   font-size: 2rem;
+}
+
+nav.open {
+  right: 0;
 }
 
 nav a {
@@ -162,6 +187,23 @@ nav a:not(:first-child) {
   margin-top: 1.5rem;
 }
 
+.lang {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+
+  font-size: 1rem;
+}
+
+.lang button {
+  color: $secondary-color;
+}
+
+.lang button.active {
+  color: $primary-color;
+  font-weight: $font-bold;
+}
+
 @keyframes slidein {
   from {
     width: 0;
@@ -173,7 +215,7 @@ nav a:not(:first-child) {
 }
 
 @media only screen and (max-width: $screen-md) {
-  .menu nav {
+  nav {
     right: -100%;
     width: 100%;
   }
