@@ -2,12 +2,20 @@
   <section>
     <header>
       <nuxt-link
+        v-if="!isBackShowing"
+        @click.native="onHomeClick"
         class="gray"
         to="/"
-        @click.native="onHomeClick"
       >
         SEONGHYEON KIM
       </nuxt-link>
+      <button
+        v-else
+        @click="onBackClick"
+        class="gray back-btn"
+      >
+        &lt;&nbsp;BACK
+      </button>
       <button
         class="menu gray"
         :class="{ open }"
@@ -62,16 +70,34 @@ export default {
     const path = this.$route.path;
     return {
       open: false,
+      isBackShowing: /projects.+/.test(path),
       isActive: [
         path === "/",
         /projects/.test(path),
       ],
     };
   },
+
+  mounted() {
+    this.$router.beforeEach((to, from, next) => {
+      const isProject = /projects.+/.test(to.path);
+      if (isProject) {
+        this.isBackShowing = true;
+      } 
+      if (!isProject && this.isBackShowing) {
+        this.isBackShowing = false;
+      }
+      next();
+    });
+  },
+
   methods: {
     onHomeClick: function() {
       const isActive = [true, false];
       this.isActive = isActive;
+    },
+    onBackClick: function() {
+      this.$router.push('/projects');
     },
     onToggleHeader: function() {
       this.open = !this.open;
@@ -105,6 +131,10 @@ header {
 
   height: $header-height;
   padding: 0 1.5rem;
+}
+
+header .back-btn {
+  font-size: 1.1rem;
 }
 
 .menu {
