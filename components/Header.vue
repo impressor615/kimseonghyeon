@@ -1,7 +1,7 @@
 <template>
   <section>
     <header>
-      <div class="gray">SEONGHYEON KIM</div>
+      <nuxt-link class="gray" to="/">SEONGHYEON KIM</nuxt-link>
       <button
         class="menu gray"
         :class="{ open }"
@@ -82,6 +82,7 @@ export default {
       const isActive = [false, false, false];
       isActive[navIndex] = true;
       this.isActive = isActive;
+      this.onToggleHeader();
     }
   },
   computed: {
@@ -150,6 +151,7 @@ header {
 
 nav {
   position: fixed;
+  z-index: $header-zindex;
   top: $header-height;
   right: -35%;
 

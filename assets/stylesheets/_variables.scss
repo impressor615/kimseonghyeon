@@ -1,5 +1,5 @@
 // font
-$font-family: 'Spoqa Han Sans';
+$font-family: 'Avenir Next,Spoqa Han Sans,spoqahansans,Apple SD Gothic Neo,Nanum Barun Gothic,Nanum Gothic,Verdana,Arial,Malgun Gothic,Dotum,sans-serif';
 $font-thin: 100;
 $font-light: 300;
 $font-regular: 500;
@@ -19,7 +19,8 @@ $max-font-size-px: "#{$max-font-size}px";
 
 // color
 $background-color: black;
-$background-secondary-color: rgba(105, 105, 105, 0.5);
+$background-secondary-color: rgba(105, 105, 105, 0.3);
+$background-thicker-color: rgb(27, 27, 27);
 $primary-color: white;
 $secondary-color: rgb(105, 105, 105);
 
@@ -36,3 +37,4 @@ $screen-xl: 1200px;
 
 // header
 $header-height: 81px;
+$header-zindex: 10;

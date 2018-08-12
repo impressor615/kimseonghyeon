@@ -11,7 +11,7 @@
         </a>
       </div>
       <nuxt class="page" />
-      <div class="vision">CREATIVE DEVELOPER</div>
+      <div class="vision font-light">CREATIVE DEVELOPER</div>
     </section>
   </div>
 </template>
