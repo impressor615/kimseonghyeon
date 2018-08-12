@@ -29,13 +29,6 @@
         >
           Projects
         </nuxt-link>
-        <nuxt-link
-          to="/writings"
-          :class="{ open: isActive[2] }"
-          @click.native="onNavItemClick(2)"
-        >
-          Writings
-        </nuxt-link>
         <div class="lang">
           <button
             :class="{ active: language === 'ko' }"
@@ -65,8 +58,7 @@ export default {
       open: false,
       isActive: [
         path === "/",
-        path === "/projects",
-        path === "/writings",
+        /projects/.test(path),
       ],
     };
   },
@@ -79,7 +71,7 @@ export default {
       this.onToggleHeader();
     },
     onNavItemClick: function(navIndex) {
-      const isActive = [false, false, false];
+      const isActive = [false, false];
       isActive[navIndex] = true;
       this.isActive = isActive;
       this.onToggleHeader();
