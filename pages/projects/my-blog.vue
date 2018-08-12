@@ -108,6 +108,8 @@ export default {
 }
 
 .project .section-wrapper {
+  min-height: 16rem;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -129,6 +131,8 @@ export default {
 
 .project .btn-group {
   display: flex;
+
+  min-height: 3.5rem;
 }
 
 .project .btn-group a {
