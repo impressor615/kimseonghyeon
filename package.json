@@ -2,7 +2,8 @@
   "name": "kimseonghyeon",
   "scripts": {
     "dev": "nuxt",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "normalize.css": "^8.0.0",
@@ -10,6 +11,7 @@
   },
   "devDependencies": {
     "node-sass": "^4.9.2",
+    "push-dir": "^0.4.1",
     "sass-loader": "^7.1.0"
   }
 }
