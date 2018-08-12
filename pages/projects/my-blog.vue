@@ -104,7 +104,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
 
-  padding: 5rem;
+  padding: 4rem 5rem;
 }
 
 .project .section-wrapper {
