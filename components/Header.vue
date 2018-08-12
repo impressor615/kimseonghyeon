@@ -1,7 +1,13 @@
 <template>
   <section>
     <header>
-      <nuxt-link class="gray" to="/">SEONGHYEON KIM</nuxt-link>
+      <nuxt-link
+        class="gray"
+        to="/"
+        @click.native="onHomeClick"
+      >
+        SEONGHYEON KIM
+      </nuxt-link>
       <button
         class="menu gray"
         :class="{ open }"
@@ -63,6 +69,10 @@ export default {
     };
   },
   methods: {
+    onHomeClick: function() {
+      const isActive = [true, false];
+      this.isActive = isActive;
+    },
     onToggleHeader: function() {
       this.open = !this.open;
     },
