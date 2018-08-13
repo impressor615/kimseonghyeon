@@ -2,7 +2,7 @@
   "name": "kimseonghyeon",
   "scripts": {
     "dev": "nuxt",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate; echo kimseonghyeon.me > dist/CNAME",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
