@@ -3,9 +3,9 @@
   font-weight: 700;
   font-display: swap;
   src: local('Spoqa Han Sans Bold'),
-  url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans/SpoqaHanSansBold.woff2') format('woff2'),
-  url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans/SpoqaHanSansBold.woff') format('woff'),
-  url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans/SpoqaHanSansBold.ttf') format('truetype');
+  url('~/assets/fonts/SpoqaHanSansBold.woff2') format('woff2'),
+  url('~/assets/fonts/SpoqaHanSansBold.woff') format('woff'),
+  url('~/assets/fonts/SpoqaHanSansBold.ttf') format('truetype');
 }
 
 @font-face {
@@ -13,25 +13,25 @@
   font-weight: 400;
   font-display: swap;
   src: local('Spoqa Han Sans Regular'),
-  url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans/SpoqaHanSansRegular.woff2') format('woff2'),
-  url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans/SpoqaHanSansRegular.woff') format('woff'),
-  url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans/SpoqaHanSansRegular.ttf') format('truetype');
+  url('~/assets/fonts/SpoqaHanSansRegular.woff2') format('woff2'),
+  url('~/assets/fonts/SpoqaHanSansRegular.woff') format('woff'),
+  url('~/assets/fonts/SpoqaHanSansRegular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Spoqa Han Sans';
   font-weight: 300;
   src: local('Spoqa Han Sans Light'),
-  url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans/SpoqaHanSansLight.woff2') format('woff2'),
-  url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans/SpoqaHanSansLight.woff') format('woff'),
-  url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans/SpoqaHanSansLight.ttf') format('truetype');
+  url('~/assets/fonts/SpoqaHanSansLight.woff2') format('woff2'),
+  url('~/assets/fonts/SpoqaHanSansLight.woff') format('woff'),
+  url('~/assets/fonts/SpoqaHanSansLight.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Spoqa Han Sans';
   font-weight: 100;
   src: local('Spoqa Han Sans Thin'),
-  url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans/SpoqaHanSansThin.woff2') format('woff2'),
-  url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans/SpoqaHanSansThin.woff') format('woff'),
-  url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans/SpoqaHanSansThin.ttf') format('truetype');
+  url('~/assets/fonts/SpoqaHanSansThin.woff2') format('woff2'),
+  url('~/assets/fonts/SpoqaHanSansThin.woff') format('woff'),
+  url('~/assets/fonts/SpoqaHanSansThin.ttf') format('truetype');
 }
