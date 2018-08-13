@@ -54,6 +54,7 @@ body {
 
 .page {
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 
   flex-grow: 1;
   background-color: $background-secondary-color;
