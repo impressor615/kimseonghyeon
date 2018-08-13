@@ -1,5 +1,6 @@
 {
   "name": "kimseonghyeon",
+  "version": "1.0.0",
   "scripts": {
     "dev": "nuxt",
     "generate": "nuxt generate; echo kimseonghyeon.me > dist/CNAME",
