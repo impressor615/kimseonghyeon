@@ -70,7 +70,7 @@ export default {
     const path = this.$route.path;
     return {
       open: false,
-      isBackShowing: /projects.+/.test(path),
+      isBackShowing: /projects\/.+/.test(path),
       isActive: [
         path === "/",
         /projects/.test(path),
@@ -80,7 +80,7 @@ export default {
 
   mounted() {
     this.$router.beforeEach((to, from, next) => {
-      const isProject = /projects.+/.test(to.path);
+      const isProject = /projects\/.+/.test(to.path);
       if (isProject) {
         this.isBackShowing = true;
       } 
