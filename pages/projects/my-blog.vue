@@ -136,7 +136,7 @@ export default {
 }
 
 .project .btn-group a {
-  flex-basis: 6.8rem;
+  flex-basis: 8rem;
   margin-right: 2rem;
 
   display: flex;
