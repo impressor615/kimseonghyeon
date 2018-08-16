@@ -10,8 +10,12 @@ html {
   }
 }
 
-html, body, #__nuxt, #__layout, #root {
+html, body, #__nuxt, #__layout {
   height: 100%;
+}
+
+#root {
+  min-height: 100%;
 }
 
 body {
