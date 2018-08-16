@@ -1,11 +1,11 @@
 <template>
   <article class="home">
     <div v-if="language === 'ko'" class="font-bold">
-      관심있는 것을 배우고 만드는 것을 좋아합니다.<br />
+      배우고 만드는 것을 좋아합니다.<br />
       <span class="secondary">
         테니스를 좋아 합니다. 음악을 좋아합니다.<br />
       </span>
-      프론트앤드 개발자로 일하고 있는 김성현입니다.<br />
+      프론트엔드 개발자로 일하고 있는 김성현입니다.<br />
       <span class="secondary">
         솔직하게 소통하는 것을 좋아합니다.<br />
       </span>
