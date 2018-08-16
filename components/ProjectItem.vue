@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link class="item" to="/projects/my-blog">
+  <nuxt-link class="item" :to="to">
     <div class="title">{{ title }}</div>
     <div class="short-desc">{{ desc }}</div>
     <div class="icon-list">
@@ -22,6 +22,10 @@ export default {
       type: String,
       required: true,
     },
+    to: {
+      type: String,
+      required: true,
+    }
   },
 };
 </script>

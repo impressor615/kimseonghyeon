@@ -9,11 +9,29 @@
     :style="{ backgroundImage: `url(${nuxt})` }"
     class="round"
   />
+  <div
+    v-else-if="type === 'express'"
+    :style="{ backgroundImage: `url(${express})` }"
+    class="round"
+  />
+  <div
+    v-else-if="type === 'react'"
+    :style="{ backgroundImage: `url(${react})` }"
+    class="round"
+  />
+  <div
+    v-else-if="type === 'redux'"
+    :style="{ backgroundImage: `url(${redux})` }"
+    class="round"
+  />
 </template>
 
 <script>
 import Javascript from '~/assets/images/javascript.png';
 import Nuxt from '~/assets/images/nuxt.jpg';
+import Express from '~/assets/images/express.png';
+import React from '~/assets/images/react.png';
+import Redux from '~/assets/images/redux.png';
 
 export default {
   props: {
@@ -30,6 +48,18 @@ export default {
 
     nuxt() {
       return Nuxt;
+    },
+
+    express() {
+      return Express;
+    },
+
+    react() {
+      return React;
+    },
+
+    redux() {
+      return Redux;
     },
   },
 };
