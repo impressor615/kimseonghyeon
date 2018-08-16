@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="header">
     <header>
       <nuxt-link
         v-if="!isBackShowing"
@@ -124,6 +124,14 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/stylesheets/_variables.scss';
 
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: $header-zindex;
+
+  background: $background-color;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -183,7 +191,6 @@ header .back-btn {
 
 nav {
   position: fixed;
-  z-index: $header-zindex;
   top: $header-height;
   right: -35%;
 

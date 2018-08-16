@@ -30,8 +30,9 @@ body {
 }
 
 .layout {
-  flex-grow: 1;
+  margin-top: $header-height;
 
+  flex-grow: 1;
   display: flex;
 }
 
