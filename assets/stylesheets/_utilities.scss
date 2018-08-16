@@ -45,3 +45,9 @@
 .font-bold {
   font-weight: $font-bold;
 }
+
+@media only screen and (max-width: $screen-md) {
+  .d-md-none {
+    display: none !important;
+  }
+}

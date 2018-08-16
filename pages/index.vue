@@ -1,7 +1,7 @@
 <template>
   <article class="home">
     <div v-if="language === 'ko'" class="font-bold">
-      배우고 만드는 것을 좋아합니다.<br />
+      배우고 직접 만들어 보는 것을 좋아합니다.<br />
       <span class="secondary">
         테니스를 좋아 합니다. 음악을 좋아합니다.<br />
       </span>
@@ -52,9 +52,7 @@ export default {
 
 @media only screen and (max-width: $screen-md) {
   .home {
-    align-items: flex-start;
-
-    padding: 2rem 3rem;
+    padding: 2.5rem;
   }
 }
 </style>
