@@ -17,6 +17,9 @@ module.exports = {
   css: [
     '~/assets/stylesheets/global.scss',
   ],
+  plugins: [
+    { src: '~plugins/ga.js', ssr: false }
+  ],
   build: {
     postcss: {
       plugins: {
