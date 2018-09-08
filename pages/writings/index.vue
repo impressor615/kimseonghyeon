@@ -25,6 +25,7 @@ import WRITINGS from '~/constants/writings';
 export default {
   components: {
     ListLayout,
+    BlogItem,
   },
   data: function() {
     const { list } = WRITINGS;
