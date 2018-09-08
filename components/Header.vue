@@ -73,7 +73,7 @@
 import { mapGetters } from 'vuex';
 
 export default {
-  data() {
+  data: function() {
     const path = this.$route.path;
     return {
       open: false,
