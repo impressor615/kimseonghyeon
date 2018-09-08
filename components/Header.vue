@@ -150,7 +150,7 @@ header {
 }
 
 header .back-btn {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 .menu {
