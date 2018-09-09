@@ -20,6 +20,14 @@ module.exports = {
   plugins: [
     { src: '~plugins/ga.js', ssr: false }
   ],
+  modules: [
+    '@nuxtjs/axios',
+  ],
+  generate: {
+    routes: [
+      'writing/test',
+    ],
+  },
   build: {
     postcss: {
       plugins: {
