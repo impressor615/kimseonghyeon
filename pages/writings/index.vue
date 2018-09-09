@@ -10,14 +10,13 @@
         :keywords="blog.keywords"
         :to="`/writings/${blog.key}`"
       />
-      <div v-if="!list.length" class="no-items">
-        아직 등록 된 글이 없습니다.
-      </div>
+      <div v-if="!list.length" class="no-items">{{ noItemText }}</div>
     </list-layout>
   </article>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import ListLayout from '~/components/ListLayout';
 import BlogItem from '~/components/BlogItem';
 import WRITINGS from '~/constants/writings';
@@ -33,6 +32,14 @@ export default {
       list,
     };
   },
+  computed: {
+    ...mapGetters([
+      'language',
+    ]),
+    noItemText() {
+      return this.language === 'ko' ? '아직 등록된 글이 없습니다.' : 'no writings registered yet!'
+    },
+  }
 };
 </script>
 
