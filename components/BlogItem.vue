@@ -67,7 +67,7 @@ export default {
   width: 100%;
   flex-basis: 100%;
 
-  margin: 2rem 0;
+  margin-top: 1rem;
   padding: 1rem;
 }
 
@@ -125,6 +125,7 @@ export default {
 @media only screen and (max-width: $screen-md) {
   .blog-item {
     padding: 0;
+    margin-top: 1.5rem;
   }
 
   .keywords-container {
