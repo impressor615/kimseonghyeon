@@ -23,11 +23,6 @@ module.exports = {
   modules: [
     '@nuxtjs/axios',
   ],
-  generate: {
-    routes: [
-      'writing/test',
-    ],
-  },
   build: {
     postcss: {
       plugins: {
