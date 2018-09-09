@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import { formattedDate } from '~/utils/dateUtils';
+
 export default {
   props: {
     title: {
@@ -42,17 +44,7 @@ export default {
 
   computed: {
     formattedDate() {
-      const writingDate = new Date(this.date);
-      const year = writingDate.getFullYear();
-      let month = writingDate.getMonth() + 1;
-      let date = writingDate.getDate();
-      if (month < 10) {
-        month = `0${month}`;
-      }
-      if (date < 10) {
-        date = `0${date}`;
-      }
-      return `${year}-${month}-${date}`;
+      return formattedDate(this.date);
     },
   },
 }
