@@ -62,6 +62,7 @@ export default {
 .title {
   font-size: 2rem;
   font-weight: $font-bold;
+  line-height: 1.5;
 
   margin-bottom: 1.5rem;
 }

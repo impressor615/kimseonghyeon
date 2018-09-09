@@ -88,6 +88,7 @@ export default {
   font-weight: $font-bold;
 
   margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
 .date {
